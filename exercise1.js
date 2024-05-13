@@ -1,10 +1,7 @@
 const process = require('node:process');
-console.log(numberToComputers());
+console.log(numberToComputers(process.argv[2]));
 
 function numberToComputers(number) {
-    if (!Number.isInteger(number)) {
-        return 'необходимо целое число компьютеров'
-    }
     const numberMod100 = number % 100;
 
     if (5 <= numberMod100 <= 20 || numberMod100 % 10 > 4) {   //случаи 5-20 и 10n + 5-9
